@@ -41,6 +41,23 @@ header {
     height: 30px;
 }
 
+/* header 스크롤 효과 */
+
+header {
+    transition: background-color 0.4s ease;
+}
+
+header.scroll {
+    background-color: rgb(248, 245, 240, 0.8)
+}
+
+header.scroll .navi,
+header.scroll .menu {
+    color: #482c0a;
+}
+
+
+
 /* header 끝 */
 
 
@@ -85,7 +102,34 @@ header {
     padding: 10px 15px;
     border-radius: 100px;
     color: #482c0a;
+    cursor: pointer;
+    transition: background-color 0.4s ease border-color 0.4s ease;
 }
+
+.hero-btn:hover {
+    background-color: #482c0a;
+    border-color: #482c0a;
+
+}
+
+.hero-btn a {
+    transition: color 0.4s ease;
+}
+
+.hero-btn:hover a {
+    color: #F8F5F0;
+}
+
+
+.hero-btn svg path {
+    transition: stroke 0.4s ease;
+}
+
+
+.hero-btn:hover svg path {
+    stroke: #F8F5F0;
+}
+
 
 .hero-btn span {
     margin-right: 40px;
@@ -155,7 +199,10 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
+
+
 
 .heritage-1 {
     justify-content: space-between;
@@ -231,8 +278,37 @@ header {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.8s ease;
 
 }
+
+.feature-text,
+.feature-font {
+    transition: border-color 0.8s ease;
+}
+
+
+.feature-text:hover {
+    border-bottom-color: #D5AA6C;
+}
+
+.feature-text:hover .feature-font {
+    color: #D5AA6C;
+}
+
+
+/* crafted hover 효과 */
+
+
+
+
+
+
+
+
+
+
 
 /* crafted section end */
 
@@ -391,6 +467,7 @@ header {
 .pen-item img {
     display: block;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .pen-item p {
@@ -398,6 +475,31 @@ header {
     margin: 0;
     text-align: center;
 }
+
+
+/* collection hover 효과 */
+.pen-item p {
+    transition: color 0.5s ease;
+}
+
+/* 선택한 펜이 있을 때 나머지 펜 */
+.feature-main-img-pens.selected .pen-item {
+    opacity: 0.3;
+}
+
+/* 선택한 만년필만 강조 */
+.feature-main-img-pens.selected .pen-item.active {
+    opacity: 1;
+}
+
+/* 선택한 만년필 이름 */
+.pen-item.active p {
+    color: #9A672A;
+    font-weight: 700;
+}
+
+
+
 
 /* collection section end */
 
