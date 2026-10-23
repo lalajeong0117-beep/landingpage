@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+
+body{
+    font-family: 'Nanum Myeongjo';
+}
+/* 400, 700 , 800 */
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.container{
+    width: 1597px;
+    margin: auto; 
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.label{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 20%;
+    line-height: 140%;
+    color: #9A672A;
+}
+
+.font-size-s{
+    font-size: 16px;
+    font-weight: 800;
+    color: #9A672A;
+    letter-spacing: 20%;
+    line-height: 140%;
+}
+
+.font-size-m{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 140%;
+    color: #9A672A;
+}
+
+.font-size-m-1{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #9A672A;
+}
+
+.label-1{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 20%;
+    line-height: 140%;
+    color: #F8EAD3;
+}
+
+.font-size-m-C1{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 140%;
+    color: #F8EAD3;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.feature-font{
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 140%;
+    letter-spacing: 20%;
+    color: #F8EAD3;
+}
+
+.feature-font-1
+{   font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #F8EAD3;
+
+}
+.font-size-L{
+    font-size: 64px;
+    line-height: 140%;
+    color: #482C0A;
+}
+.font-size-L-1{
+    font-size: 64px;
+    line-height: 140%;
+    color: #F8EAD3;
+}
+.font-size-m-w{
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    color: #F8EAD3;
+}
+.font-size-m-w-b{
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 800;
+    color: #F8EAD3;
+}
+
+.gap-30{
+    gap: 30px;
+}
+
+
+.w-70{
+    width: 70%;
+}
+.w-30{
+    width: 30%;
+}
+.w-50{
+    width: 50%;
+}
+.w-40{
+    width: 40%;
+}
+.w-20{
+    width: 20%;
+}
+.w-10{
+    width: 10%;
+}
+.w-80{
+    width: 80%;
+}
+
+
+
+
+/* 고정값 */
+
+
+/* hero  */
+.hero-text h1{
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 140%;
+}
+.hero-text h3{
+    font-size: 16px;
+    letter-spacing: 20%;
+}
+
+.hero h1{
+    color: #482C0A
+}
+/* hero end */
+
+
+/* heritage section start */
+
+
+.heritage-title{
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #482C0A;
+}
+
+
+
+
+@media(max-width:1280px){
+    .w-70,.w-30{
+        width: 100%;
+    }
+}
+
+/* heritage section end */
+
+
+
+
+
+
+
+/* crafted section star */
+.crafted-main-title{
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #F8EAD3;
+}
+
+.crafted-main-text{
+    font-size: 20px;
+    font-weight: 400;
+    color: #F8EAD3;
+    line-height: 140%;
+}
+
+
+.collection-main-title-content h2{
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #482C0A
+}
+
+
+/* crafted section end */
+
+
+/* collection section start */
+
+.pen-item{
+    font-size: 20px;
+    line-height: 180%;
+}
+
+.m{
+    color: #482C0A;
+}
+.c{
+    color: #9A672A;
+}
+.e{
+    color: #7E776A;
+}
+.g{
+    color: #3C3731;
+}
+.co{
+    color: #511E25;
+}
+
+/* collection section end */
+
+
+
+@media(max-width:1597px){
+    .container{
+    width: 100%;
+    margin: auto; 
+}
+}
