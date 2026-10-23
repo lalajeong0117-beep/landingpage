@@ -17,14 +17,12 @@ header {
     font-weight: 800;
 }
 
-.menu {
+.menu ul {
     font-size: 24px;
     font-weight: 700;
     gap: 44px;
     color: #482c0a;
-
     align-items: center;
-
 }
 
 .nav {
@@ -381,6 +379,26 @@ header {
     padding: 15px;
 }
 
+
+.pen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.pen-item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.pen-item p {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
 /* collection section end */
 
 
@@ -701,35 +719,58 @@ header {
 
 
 /*header 반응형*/
-/* @media(max-width:1280px){
-    .nav{
+@media(max-width:1280px) {
+    .nav {
+        width: 100%;
+        margin-right: 0;
+        align-items: center;
         justify-content: space-between;
     }
-    .navi{
+
+    .navi {
         margin-right: 0;
     }
-    .mo-navi{
+
+    /* 햄버거 아이콘 */
+    .mo-navi {
         display: block;
+        margin-left: auto;
         position: relative;
-        z-index: 1001;
+        z-index: 1002;
         cursor: pointer;
     }
-    .menu{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
 
+    .mo-navi img {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .menu {
+        display: none;
+        position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: #F8F5F0;
+        z-index: 1000;
+    }
 
+    .menu ul {
+        width: 100%;
+        height: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 30px;
+    }
+}
 
-        background-color: #F8F5F0;
-        display: none;
-    } */
+
+
 /*header 반응형 end*/
 
 
@@ -1228,6 +1269,16 @@ header {
     }
 
 
+    .gift-img1,
+    .gift-img2,
+    .gift-img3 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+
 }
 
 /* collection 반응형 end */
@@ -1236,8 +1287,8 @@ header {
 /* writing 반응형 */
 @media(max-width:1280px) {
     .writing-main-title {
-        right: 12%;
-        bottom: 40%;
+        right: 15%;
+        bottom: 50%;
         gap: 30px;
     }
 
@@ -1263,6 +1314,7 @@ header {
     .sub-img-1,
     .sub-img-2 {
         min-width: 0;
+        gap: 12px;
     }
 
 }
@@ -1287,7 +1339,6 @@ header {
         height: auto;
     }
 
-    /* 이미지 위 그라데이션 */
     .gradient-box {
         width: 100%;
         height: 100%;
@@ -1297,7 +1348,7 @@ header {
                 rgba(248, 245, 240, 1) 100%);
     }
 
-    /* 메인 제목 */
+
     .writing-main-title {
         right: 10%;
         bottom: 45%;
@@ -1312,7 +1363,7 @@ header {
         font-size: 13px;
     }
 
-    /* 서브 이미지 */
+
     .writing-sub-img {
         top: 58%;
         left: 48%;
@@ -1367,6 +1418,7 @@ header {
         object-fit: cover;
         object-position: center;
         display: block;
+        background-position: center;
 
     }
 
@@ -1401,11 +1453,15 @@ header {
 @media (max-width: 768px) {
 
     .slogun-whole-contianer>img {
-        height: 400px;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 65% center;
+        background-repeat: no-repeat;
     }
 
     .slogun-main-content-text {
-        left: 20px;
+        left: 60px;
         right: 20px;
         gap: 20px;
     }

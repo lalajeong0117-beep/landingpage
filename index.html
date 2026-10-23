@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <h3>안녕!</h3>
+
 
     <!-- header 시작 -->
     <header class="header">
         <div class="container">
             <nav class="nav d-flex">
                 <h1 class="navi">AUREN</h1>
-                <ul class="menu d-flex">
-                    <li><a href="#"></a>Heritage</li>
-                    <li><a href="#"></a>Crafted</li>
-                    <li><a href="#"></a>Collection</li>
-                    <li><a href="#"></a>Grft / Engraving</li>
-                </ul>
+                <div class="menu">
+                    <ul class="d-flex">
+                        <li><a href="#"></a>Heritage</li>
+                        <li><a href="#"></a>Crafted</li>
+                        <li><a href="#"></a>Collection</li>
+                        <li><a href="#"></a>Gift / Engraving</li>
+                    </ul>
+                </div>
                 <div class="mo-navi">
                     <img src="assets/images/icon/header-ghost-btn.svg" alt="메뉴">
 
@@ -34,6 +37,7 @@
 
     <!-- hero 시작 -->
     <section class="hero">
+
 
         <div class="container">
             <div class="text-content d- d-flex">
@@ -70,6 +74,7 @@
     <section class="heritage-section">
 
         <div class="container">
+
             <div class="d-flex heritage-1">
                 <div class="heritage-year">
                     <div class="year-text d-flex font-size-s">
@@ -89,11 +94,11 @@
 
             <div class="d-flex heritage-direction">
                 <div class="heritage-img d-flex gap-30 w-70">
-                    <div class="heritage-content heritage-img-1">
+                    <div class="heritage-content heritage-img-1" data-aos="fade-up" data-aos-delay="100">
                     </div>
-                    <div class="heritage-content heritage-img-2">
+                    <div class="heritage-content heritage-img-2" data-aos="fade-up" data-aos-delay="200">
                     </div>
-                    <div class="heritage-content heritage-img-3">
+                    <div class="heritage-content heritage-img-3" data-aos="fade-up" data-aos-delay="400">
                     </div>
                 </div>
                 <div class="heritage-img-text w-30">
@@ -440,7 +445,7 @@
     <!-- 슬로건 section 시작 -->
     <section class="slogun-section">
         <div class="slogun-whole-contianer">
-            <img src="assets/images/slogun-main-img.jpg" alt="슬로건이미지">
+            <img src="assets/images/slogun-main-img.jpg" alt="슬로건이미지" class="slogun-bg">
 
             <div class="slogun-main-content-text d-flex">
                 <div class="slogun-title d-flex">
@@ -528,7 +533,14 @@
 
 
     <script src="assets/js/jquery.min.js"></script>
-
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 
 </body>
 
