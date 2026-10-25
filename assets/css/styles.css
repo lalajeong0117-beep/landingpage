@@ -283,6 +283,7 @@ header.scroll .menu {
 
 }
 
+/* crafted hover 효과 */
 .feature-text,
 .feature-font {
     transition: border-color 0.8s ease;
@@ -298,7 +299,6 @@ header.scroll .menu {
 }
 
 
-/* crafted hover 효과 */
 
 
 
@@ -462,6 +462,7 @@ header.scroll .menu {
     align-items: center;
     text-align: center;
     gap: 10px;
+    transition: opacity 0.6s ease;
 }
 
 .pen-item img {
@@ -478,8 +479,88 @@ header.scroll .menu {
 
 
 /* collection hover 효과 */
+
+/* 아이콘 hover */
+.feature-1,
+.feature-2,
+.feature-3,
+.feature-4,
+.feature-5,
+.feature-6 {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    transition: border-color 0.5s ease,
+                opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.feature-1:hover,
+.feature-2:hover,
+.feature-3:hover,
+.feature-4:hover,
+.feature-5:hover,
+.feature-6:hover {
+    border-color: #9A672A;
+}
+
+/* 아이콘 영역에 마우스를 올리면 전체 흐리게 */
+.feature-main-icons:hover .feature-1,
+.feature-main-icons:hover .feature-2,
+.feature-main-icons:hover .feature-3,
+.feature-main-icons:hover .feature-4,
+.feature-main-icons:hover .feature-5,
+.feature-main-icons:hover .feature-6 {
+    opacity: 0.3;
+}
+
+/* 마우스를 올린 아이콘만 선명하게 */
+.feature-1:hover,
+.feature-2:hover,
+.feature-3:hover,
+.feature-4:hover,
+.feature-5:hover,
+.feature-6:hover {
+    opacity: 1;
+    border-color: #9A672A;
+}
+
+/* 아이콘 전체에 마우스를 올리면 흐리게 */
+.feature-main-icons:hover .feature-1,
+.feature-main-icons:hover .feature-2,
+.feature-main-icons:hover .feature-3,
+.feature-main-icons:hover .feature-4,
+.feature-main-icons:hover .feature-5,
+.feature-main-icons:hover .feature-6 {
+    opacity: 0.3;
+}
+
+/* 마우스를 올린 아이콘만 선명하게 */
+.feature-main-icons .feature-1:hover,
+.feature-main-icons .feature-2:hover,
+.feature-main-icons .feature-3:hover,
+.feature-main-icons .feature-4:hover,
+.feature-main-icons .feature-5:hover,
+.feature-main-icons .feature-6:hover {
+    opacity: 1;
+    border-color: #9A672A;
+}
+
+
+
+
+
+
+
+
+
+/* 만년필 이미지 hover */
+
+.pen-item:hover{
+    opacity: 1;
+    
+}
 .pen-item p {
-    transition: color 0.5s ease;
+    transition: color 0.5s ease-in-out
 }
 
 /* 선택한 펜이 있을 때 나머지 펜 */
@@ -493,10 +574,30 @@ header.scroll .menu {
 }
 
 /* 선택한 만년필 이름 */
-.pen-item.active p {
+.pen-item , .m .active  {
+    color: #482C0A;
+    font-weight: 700;
+}
+.pen-item , .c .active  {
     color: #9A672A;
     font-weight: 700;
 }
+.pen-item , .e .active  {
+    color: #7E776A;
+    font-weight: 700;
+}
+.pen-item , .g .active  {
+    color: #3C3731;
+    font-weight: 700;
+}
+.pen-item , .co .active  {
+    color: #511E25;
+    font-weight: 700;
+}
+
+
+
+
 
 
 
