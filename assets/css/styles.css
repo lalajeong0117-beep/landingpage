@@ -23,6 +23,7 @@ header {
     gap: 44px;
     color: #482c0a;
     align-items: center;
+    cursor: pointer;
 }
 
 .nav {
