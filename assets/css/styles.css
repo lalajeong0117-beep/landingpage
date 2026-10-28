@@ -7,6 +7,7 @@ header {
     padding: 15px 0;
     width: 100%;
     position: fixed;
+    top: 0;
     z-index: 999;
 }
 
@@ -24,6 +25,27 @@ header {
     color: #482c0a;
     align-items: center;
     cursor: pointer;
+}
+
+.menu li {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+
+.menu li:hover {
+    color: #9A672A;
+    border-bottom-color: #9A672A;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.header.scroll .menu a {
+    color: inherit;
 }
 
 .nav {
@@ -596,13 +618,6 @@ header.scroll .menu {
     font-weight: 700;
 }
 
-
-
-
-
-
-
-
 /* collection section end */
 
 
@@ -680,6 +695,41 @@ header.scroll .menu {
     gap: 6px;
 }
 
+
+
+
+/* writing hover 효과 */
+
+
+.sub-img-1,
+.sub-img-2 {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* 이미지 테두리 */
+.sub-img-1 img,
+.sub-img-2 img {
+    transition: box-shadow 0.5s ease;
+}
+
+/* 비교 이미지 영역에 마우스를 올리면 둘 다 흐려짐 */
+.writing-sub-img:hover .sub-img-1,
+.writing-sub-img:hover .sub-img-2 {
+    opacity: 0.5;
+}
+
+/* 마우스를 올린 카드만 다시 선명해짐 */
+.writing-sub-img .sub-img-1:hover,
+.writing-sub-img .sub-img-2:hover {
+    opacity: 1;
+}
+
+/* 마우스를 올린 이미지에 골드 테두리 */
+.sub-img-1:hover img,
+.sub-img-2:hover img {
+    box-shadow: 0 0 0 2px #9A672A;
+}
 
 /* writing section end */
 
@@ -765,6 +815,59 @@ header.scroll .menu {
 }
 
 
+
+/* gift/engraving hover 효과 */
+
+/* Gift 이미지 Hover */
+
+.gift-img1,
+.gift-img2,
+.gift-img3 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 이미지 위 반투명 오버레이 */
+.gift-img1::after,
+.gift-img2::after,
+.gift-img3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(39, 24, 5, 0.18);
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* Hover 시 오버레이 제거 */
+.gift-main-option-1:hover .gift-img1::after,
+.gift-main-option-2:hover .gift-img2::after,
+.gift-main-option-3:hover .gift-img3::after {
+    opacity: 0;
+}
+
+
+/* Gift 카드 텍스트 강조 */
+
+.gift-option-1,
+.gift-option-2,
+.gift-option-3 {
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+}
+
+.gift-main-option-1:hover .gift-option-1,
+.gift-main-option-2:hover .gift-option-2,
+.gift-main-option-3:hover .gift-option-3 {
+    border-bottom-color: #9A672A;
+}
+
+
+
 /* gift/engraving section end */
 
 
@@ -826,6 +929,46 @@ header.scroll .menu {
     height: 14px;
     flex-shrink: 0;
 }
+
+/* slogun hover 효과 */
+
+
+/* Slogan 버튼 기본 스타일 */
+.slogun-btn {
+    transition: background-color 0.5s ease,
+                border-color 0.5s ease;
+}
+
+/* 버튼 글씨 */
+.slogun-btn a {
+    transition: color 0.5s ease;
+}
+
+/* Hover 시 버튼 배경 */
+.slogun-btn:hover {
+    background-color: #F8F5F0;
+    border-color: #F8F5F0;
+}
+/* 글씨 색상 전환 */
+.slogun-btn .font-size-m-C1 {
+    transition: color 0.5s ease;
+}
+
+.slogun-btn:hover .font-size-m-C1 {
+    color: #482C0A;
+}
+
+/* 화살표 색상 전환 */
+.slogun-btn svg path {
+    transition: stroke 0.5s ease;
+}
+
+.slogun-btn:hover svg path {
+    stroke: #482C0A;
+}
+
+
+
 
 /* slogun section end */
 
@@ -1493,7 +1636,7 @@ header.scroll .menu {
     .writing-main-title {
         right: 15%;
         bottom: 50%;
-        gap: 30px;
+        gap: 25px;
     }
 
     .font-size-L {
@@ -1504,10 +1647,15 @@ header.scroll .menu {
         font-size: 16px;
     }
 
+    .writing-main-title .font-size-m {
+        font-size: 16px;
+    }
+
     .writing-sub-img {
-        top: 60%;
-        left: 54%;
-        gap: 20px;
+        top: 58%;
+        left: 52%;
+        width: 44%;
+        gap: 15px;
     }
 
     .writing-sub-img img {
@@ -1517,10 +1665,45 @@ header.scroll .menu {
 
     .sub-img-1,
     .sub-img-2 {
+        width: 50%;
         min-width: 0;
-        gap: 12px;
+        gap: 10px;
     }
 
+}
+
+@media(max-width:1024px) {
+    .writing-main-title {
+        right: 10%;
+        bottom: 46%;
+        gap: 15px;
+    }
+
+    .writing-main-title .font-size-L {
+        font-size: 26px;
+    }
+
+    .writing-main-title .font-size-m-1 {
+        font-size: 14px;
+    }
+
+    .writing-main-title .font-size-m {
+        font-size: 14px;
+    }
+
+    .writing-sub-img {
+        top: 57%;
+        left: 48%;
+        width: 48%;
+        gap: 10px;
+    }
+
+    .sub-img-1,
+    .sub-img-2 {
+        width: 50%;
+        min-width: 0;
+        gap: 6px;
+    }
 }
 
 /* 768px */

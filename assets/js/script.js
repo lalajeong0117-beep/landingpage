@@ -11,8 +11,27 @@ $(function () {
         $(".menu").fadeToggle(500);
     });
 
-    $(".menu a").click(function () {
-        $(".menu").fadeOut(500);
+    // Header 메뉴 클릭 시 부드러운 스크롤 이동 (약 0.8초) 및 모바일 메뉴 닫기
+    $(".menu a").click(function (e) {
+        var targetId = $(this).attr("href");
+
+        if (targetId && targetId.startsWith("#")) {
+            var $target = $(targetId);
+            if ($target.length) {
+                e.preventDefault();
+                var headerHeight = $("header").outerHeight() || 0;
+                var targetOffset = $target.offset().top - headerHeight;
+
+                $("html, body").stop().animate({
+                    scrollTop: targetOffset > 0 ? targetOffset : 0
+                }, 800);
+            }
+        }
+
+        // 모바일(1280px 이하)에서 메뉴 클릭 시 자동으로 닫기
+        if ($(".mo-navi").is(":visible")) {
+            $(".menu").fadeOut(500);
+        }
     });
 
     // header 스크롤시 색상 변경
