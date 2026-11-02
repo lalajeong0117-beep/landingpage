@@ -33,9 +33,14 @@ header {
     transition: color 0.4s ease, border-color 0.4s ease;
 }
 
-.menu li:hover {
+.menu li:hover,
+.menu li.active {
     color: #9A672A;
     border-bottom-color: #9A672A;
+}
+
+.navi {
+    cursor: pointer;
 }
 
 .menu a {
@@ -876,23 +881,22 @@ header.scroll .menu {
 /* slogun section stat */
 .slogun-section {
     width: 100%;
+    background-image: url(../images/slogun-main-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .slogun-whole-contianer {
     width: 100%;
-    position: relative;
-}
-
-.slogun-whole-contianer>img {
-    width: 100%;
-    height: 680px;
-    display: block;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    box-sizing: border-box;
 }
 
 .slogun-main-content-text {
-    position: absolute;
-    top: 192px;
-    left: 170px;
     flex-direction: column;
     align-items: flex-start;
     gap: 60px;
@@ -900,7 +904,7 @@ header.scroll .menu {
 
 .slogun-title {
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
 }
 
 .slogun-btn {
@@ -980,13 +984,15 @@ header.scroll .menu {
     width: 100%;
     height: auto;
     background-color: #F8F5F0;
-    padding: 80px;
+    padding: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 .footer-text {
     display: flex;
     flex-direction: column;
-    gap: 70px
+    gap: 25px;
 }
 
 .footer-main>img {
@@ -996,13 +1002,21 @@ header.scroll .menu {
 
 .footer-main {
     flex-direction: column;
+    gap: 15px;
+}
+
+.f-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 20px;
 }
 
+.f-title p,
 .f-title-1,
 .f-title-2,
 .f-title-3 p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     letter-spacing: 22%;
     color: #9A672A;
@@ -1013,7 +1027,7 @@ header.scroll .menu {
 }
 
 .f-info {
-    gap: 80px;
+    gap: 30px;
 }
 
 .f-info-1 {
@@ -1021,14 +1035,14 @@ header.scroll .menu {
 }
 
 .f-info-1 p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     letter-spacing: 22%;
     color: #9A672A;
 }
 
 .f-info-2 {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     letter-spacing: 20%;
     color: #9A672A;
@@ -1039,14 +1053,6 @@ header.scroll .menu {
 .point {
     font-weight: 800;
 }
-
-
-
-
-
-
-
-
 
 /*  footer section end */
 
@@ -1781,14 +1787,48 @@ header.scroll .menu {
 
 /* gift 반응형 start */
 @media(max-width:768px) {
+    .gift-section {
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
     .gift-main-title-text-content {
+        padding: 0;
         gap: 30px;
+    }
+
+    .gift-section-main-title h2 {
+        font-size: 32px;
+        line-height: 130%;
+    }
+
+    .gift-main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .gift-main-option-1,
+    .gift-main-option-2,
+    .gift-main-option-3 {
+        width: 100%;
+        flex: none;
+    }
+
+    .gift-img1,
+    .gift-img2,
+    .gift-img3 {
+        width: 100%;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .gift-option-1,
     .gift-option-2,
     .gift-option-3 {
-        gap: 32px;
+        margin-top: 20px;
+        gap: 20px;
     }
 }
 
@@ -1799,21 +1839,12 @@ header.scroll .menu {
 
 @media(max-width:1280px) {
 
-    .slogun-whole-contianer>img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        background-position: center;
-
+    .slogun-whole-contianer {
+        min-height: 500px;
+        padding: 60px 0;
     }
 
     .slogun-main-content-text {
-        top: 0;
-        left: 8%;
-        height: 100%;
-        justify-content: center;
         gap: 24px;
     }
 
@@ -1839,26 +1870,30 @@ header.scroll .menu {
 
 @media (max-width: 768px) {
 
-    .slogun-whole-contianer>img {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
+    .slogun-section {
         background-position: 65% center;
-        background-repeat: no-repeat;
+    }
+
+    .slogun-whole-contianer {
+        min-height: 420px;
+        padding: 50px 0;
     }
 
     .slogun-main-content-text {
-        left: 60px;
-        right: 20px;
+        gap: 20px;
+    }
+
+    .slogun-title {
         gap: 20px;
     }
 
     .font-size-L-1 {
         font-size: 32px;
+        line-height: 130%;
     }
 
     .font-size-m-w {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .font-size-m-w-b {
@@ -1897,10 +1932,11 @@ header.scroll .menu {
         height: 50px;
     }
 
+    .f-title p,
     .f-title-1,
     .f-title-2,
     .f-title-3 p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .f-info-1 p {
@@ -1919,13 +1955,13 @@ header.scroll .menu {
     .footer {
         width: 100%;
         height: auto;
-        padding: 40px 20px;
+        padding: 25px 20px;
         box-sizing: border-box;
     }
 
     .footer-main {
         align-items: flex-start;
-        gap: 15px;
+        gap: 12px;
     }
 
     .footer-main>img {
@@ -1934,15 +1970,21 @@ header.scroll .menu {
     }
 
     .footer-text {
-        gap: 30px;
+        gap: 20px;
     }
 
     /* Footer 제목 */
+    .f-title,
+    .f-title p,
     .f-title-1,
     .f-title-2,
     .f-title-3 p {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 150%;
+    }
+
+    .f-title {
+        gap: 8px 15px;
     }
 
     .f-title-1 {
@@ -1951,7 +1993,7 @@ header.scroll .menu {
 
     .f-info {
         flex-direction: column;
-        gap: 25px;
+        gap: 15px;
     }
 
     .f-info-1 {
